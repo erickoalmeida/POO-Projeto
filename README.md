@@ -1,5 +1,5 @@
 # POO-Projeto
-##Git e Github:
-<li>
-  <ul>Erick</ul>
-</li>
+<h2>Git e Github:</h2>
+<ul>
+  <li>Erick</li>
+</ul>
