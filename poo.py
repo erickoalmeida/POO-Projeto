@@ -35,7 +35,7 @@ while True:
             print("Jogador", nome, "cadastrado com sucesso!")
     elif opcao == "2":
         tipo = input("Tipo de poção ('comum' ou 'arremessavel'): ")
-        if tipo in ("comum", "arremessavel"):
+        if tipo ("comum", "arremessavel"):
             nome = input("Digite o nome da poção: ")
             if nome == "":
                 print("Nome de poção inválido.")
@@ -45,30 +45,29 @@ while True:
         else:
             print("Tipo inválido. Use 'comum' ou 'arremessavel'.")
     elif opcao == "3":
-        nome = input("Digite o nome do jogador a ser excluído: ")
+        nome = input("Digite o nome do jogador a excluir: ")
         posicao = 0
         for jogador in jogo.jogadores:
-            for jogador in jogo.jogadores:
-                if jogador.nome == nome:
-                    jogo.jogadores.pop(posicao)
-                    print("Jogador", nome, "excluído com sucesso!")
-                else:
-                    posicao += 1
+            if jogador.nome == nome:
+                jogador.ativo = False
+                print("Jogador removido com sucesso!")
+        else:
+            posicao += 1
     elif opcao == "4":
-        pocao_excluir = input("Digite o nome da poção a ser excluída: ")
+        pocao_excluir = input("digite um nome da pocao que deseja excluir: ")
+        posicao = 0
         for pocao in jogo.pocoes:
-            posicao = 0
-            for pocao in jogo.pocoes:
-                if pocao.nome == pocao_excluir:
-                    jogo.pocoes.pop(posicao)
-                    print("Poção", pocao_excluir, "excluída com sucesso!")
-                else:
-                    posicao += 1
-
+            if pocao.nome == pocao_excluir:
+                jogo.pocoes.ativo = False
+                print("pocao excluida com sucesso!")
+            else:
+                posicao += 1
     elif opcao == "5":
         #print(dados.jogadores)
         for i in jogo.jogadores:
-            print(i.nome)
+            if i.ativo == True:
+                print(i.nome)
     elif opcao == "6":
         for i in jogo.pocoes:
-            print(i.nome, i.tipo)
+            if i.ativo == True:
+                print(i.nome, i.tipo)
