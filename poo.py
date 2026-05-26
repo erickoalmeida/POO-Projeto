@@ -28,46 +28,48 @@ while True:
 
     if opcao == "1":
         nome = input("Digite o nome do jogador: ")
-        if nome == "":
+        if nome == None:
             print("Nome inválido.")
         else:
-            jogo.jogadores.append(Player(nome))
+            jogador = Player(nome)
+            jogo.jogadores.append(jogador)
             print("Jogador", nome, "cadastrado com sucesso!")
     elif opcao == "2":
         tipo = input("Tipo de poção ('comum' ou 'arremessavel'): ")
-        if tipo ("comum", "arremessavel"):
+        if tipo in ("comum", "arremessavel"):
             nome = input("Digite o nome da poção: ")
             if nome == "":
                 print("Nome de poção inválido.")
             else:
-                jogo.pocoes.append(Pocao(nome, tipo))
+                pocao = Pocao(nome, tipo)
+                jogo.pocoes.append(pocao)
                 print("Poção:", nome, "do tipo:", tipo, ",cadastrada com sucesso!")
         else:
             print("Tipo inválido. Use 'comum' ou 'arremessavel'.")
     elif opcao == "3":
-        nome = input("Digite o nome do jogador a excluir: ")
+        nome = input("Digite um nome do jogador que deseja excluir: ")
         posicao = 0
         for jogador in jogo.jogadores:
             if jogador.nome == nome:
                 jogador.ativo = False
-                print("Jogador removido com sucesso!")
-        else:
-            posicao += 1
+                print("jogador removido com sucesso!!")
+            else:
+                posicao += 1
     elif opcao == "4":
-        pocao_excluir = input("digite um nome da pocao que deseja excluir: ")
+        pocao_excluir = input("digite um nome da porcao que deseja excluir: ")
         posicao = 0
         for pocao in jogo.pocoes:
             if pocao.nome == pocao_excluir:
-                jogo.pocoes.ativo = False
-                print("pocao excluida com sucesso!")
+                pocao.ativo = False
+                print("pocao removido com sucesso!!")
             else:
-                posicao += 1
+                posicao +=1
     elif opcao == "5":
         #print(dados.jogadores)
         for i in jogo.jogadores:
-            if i.ativo == True:
+            if(i.ativo == True):
                 print(i.nome)
     elif opcao == "6":
         for i in jogo.pocoes:
-            if i.ativo == True:
+            if(i.ativo == True):
                 print(i.nome, i.tipo)
