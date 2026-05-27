@@ -7,14 +7,14 @@ eu uso o conceito de Heranca
 '''
 class Players:
     def __init__(self, nome):
-        self.nome = nome
-        self.ativo = True
+        self._nome = nome
+        self._ativo = True
 
 class PocoesIlegais:
     def __init__(self, nome, tipo):
-        self.nome = nome
-        self.tipo = tipo
-        self.ativo = True
+        self._nome = nome
+        self._tipo = tipo
+        self._ativo = True
 
 class Player(Players):
     def __init__(self, nome):
