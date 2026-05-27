@@ -2,8 +2,6 @@
 Heranca
 Quando eu quiser aproveitar atributos ou metodos entre classes 
 eu uso o conceito de Heranca
-'''
-'''
  "Um player tem coisas ('ativo', 'nome') ent, ele pode ter coisas de 
  Pocao"
 '''
