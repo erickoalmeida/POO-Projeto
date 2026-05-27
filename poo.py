@@ -38,7 +38,7 @@ while True:
         tipo = input("Tipo de poção ('comum' ou 'arremessavel'): ")
         if tipo in ("comum", "arremessavel"):
             nome = input("Digite o nome da poção: ")
-            if nome == "":
+            if nome == None:
                 print("Nome de poção inválido.")
             else:
                 pocao = Pocao(nome, tipo)
