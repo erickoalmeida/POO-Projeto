@@ -8,7 +8,7 @@ eu uso o conceito de Heranca
 class Players:
     def __init__(self, nome):
         self._nome = nome
-        self._ativo = True
+        self._ativo = True 
 
 class PocoesIlegais:
     def __init__(self, nome, tipo):
@@ -23,6 +23,9 @@ class Player(Players):
 class Pocao(PocoesIlegais):
     def __init__(self, nome, tipo):
         super().__init__(nome, tipo)
+'''
+nao tem ativo, pois ja utilizamos nas duas classes
+'''
 
 class Jogo:
     def __init__(self):
