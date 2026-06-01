@@ -4,6 +4,7 @@ Quando eu quiser aproveitar atributos ou metodos entre classes
 eu uso o conceito de Heranca
  "Um player tem coisas ('ativo', 'nome') ent, ele pode ter coisas de 
  Pocao"
+ "nao tem, no super, 'ativo', pois ja utilizamos nas duas classes"
 '''
 class Players:
     def __init__(self, nome):
@@ -23,9 +24,6 @@ class Player(Players):
 class Pocao(PocoesIlegais):
     def __init__(self, nome, tipo):
         super().__init__(nome, tipo)
-'''
-nao tem ativo, pois ja utilizamos nas duas classes
-'''
 
 class Jogo:
     def __init__(self):
