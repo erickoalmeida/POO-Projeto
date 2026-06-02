@@ -16,7 +16,6 @@ while True:
     print("  :=#######*=*#++    ")
     print("  +*##%###**+##++    ")
     print("    +++++++++++      ")
-    print("\n=====================\n")
     print("1................ Cadastrar Jogador")
     print("2................ Cadastrar Poção")
     print("3................ Excluir Jogador")
@@ -30,22 +29,33 @@ while True:
         nome = input("Digite o nome do jogador: ")
         if nome == None:
             print("Nome inválido.")
-        else:
-            jogador = Player(nome)
-            jogo.jogadores.append(jogador)
-            print("Jogador", nome, "cadastrado com sucesso!")
+        else:            
+            achou = False
+            for jogador in jogo.jogadores:
+                if jogador.nome == nome:
+                    achou = True
+            
+            if achou == True:
+                print("Já existe uma pessoa com esse nome")
+            else:
+                jogador = Player(nome)
+                jogo.jogadores.append(jogador)
+                print("Jogador", nome, "cadastrado com sucesso!")
     elif opcao == "2":
         tipo = input("Tipo de poção ('comum' ou 'arremessavel'): ")
-        if tipo in ("comum", "arremessavel"):
+        
+        """if tipo in ("comum", "arremessavel"):
             nome = input("Digite o nome da poção: ")
-            if nome == None:
-                print("Nome de poção inválido.")
-            else:
-                pocao = Pocao(nome, tipo)
-                jogo.pocoes.append(pocao)
-                print("Poção:", nome, "do tipo:", tipo, ",cadastrada com sucesso!")
-        else:
-            print("Tipo inválido. Use 'comum' ou 'arremessavel'.")
+            for i in 
+                if nome == None:
+                    print("Nome de poção inválido.")
+                else:
+                    pocao = Pocao(nome, tipo)
+
+
+                    jogo.pocoes.append(pocao)
+                    print("Poção:", nome, "do tipo:", tipo, ",cadastrada com sucesso!")"""
+
     elif opcao == "3":
         nome = input("Digite um nome do jogador que deseja excluir: ")
         for jogador in jogo.jogadores:
