@@ -8,6 +8,6 @@
     <li>Erick Oliveira de Almeida</li>
     <li>Vinicius Xavier Luciano</li>
     <li>Jadson Jardel dos Santos</li>
-    <li>Vyctor Lenno Almeida de Azevedo</li>
+    <li>Vyctorlenno Almeida de Azevedo</li>
     <li>David Caniell Santos de Medeiros</li>
 </ul>
