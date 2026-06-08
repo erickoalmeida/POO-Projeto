@@ -4,7 +4,7 @@ jogo = Jogo()
 
 while True:
     print("=====================\n")
-    print("   [POÇÕES/MAKER]   \n")
+    print("   [PORÇÕES/MAKER]   \n")
     print("       .....         ")
     print("     .:=====::       ")
     print("     :-***#*::       ")
@@ -16,6 +16,7 @@ while True:
     print("  :=#######*=*#++    ")
     print("  +*##%###**+##++    ")
     print("    +++++++++++      ")
+    print("\n=====================\n")
     print("1................ Cadastrar Jogador")
     print("2................ Cadastrar Poção")
     print("3................ Excluir Jogador")
@@ -24,7 +25,7 @@ while True:
     print("6................ Visu. Poções")
 
     opcao = input("Digite uma opção: ")
-    
+
     if opcao == "1":
         nome = input("Digite o nome do jogador: ")
         if nome == None:
@@ -43,37 +44,48 @@ while True:
                 print("Jogador", nome, "cadastrado com sucesso!")
     elif opcao == "2":
         tipo = input("Tipo de poção ('comum' ou 'arremessavel'): ")
-        
-        """if tipo in ("comum", "arremessavel"):
+        if tipo in ("comum", "arremessavel"):
             nome = input("Digite o nome da poção: ")
-            for i in 
-                if nome == None:
-                    print("Nome de poção inválido.")
-                else:
-                    pocao = Pocao(nome, tipo)
-
-
-                    jogo.pocoes.append(pocao)
-                    print("Poção:", nome, "do tipo:", tipo, ",cadastrada com sucesso!")"""
-
+            if nome == "":
+                print("Nome de poção inválido.")
+            else:            
+                achou = False
+                for tipo in jogo.pocoes:
+                    if pocao.nome == nome:
+                        achou = True
+            
+            if achou == True:
+                print("Já existe uma pocao com esse nome")
+            else:
+                pocao = Pocao(nome, tipo)
+                jogo.pocoes.append(pocao)
+                print("Poção:", nome, "do tipo:", tipo, ",cadastrada com sucesso!")
+        else:
+            print("Tipo inválido. Use 'comum' ou 'arremessavel'.")
     elif opcao == "3":
         nome = input("Digite um nome do jogador que deseja excluir: ")
+        posicao = 0
         for jogador in jogo.jogadores:
             if jogador.nome == nome:
                 jogador.ativo = False
-                print("Jogador removido com sucesso!")
+                print("jogador removido com sucesso!!")
+            else:
+                posicao += 1
     elif opcao == "4":
-        pocao_excluir = input("Digite um nome da poção que deseja excluir: ")
+        pocao_excluir = input("digite um nome da porcao que deseja excluir: ")
+        posicao = 0
         for pocao in jogo.pocoes:
             if pocao.nome == pocao_excluir:
                 pocao.ativo = False
-                print("Poção removida com sucesso!")
+                print("pocao removido com sucesso!!")
+            else:
+                posicao +=1
     elif opcao == "5":
+        #print(dados.jogadores)
         for i in jogo.jogadores:
-            if i.ativo == True:
+            if(i.ativo == True):
                 print(i.nome)
     elif opcao == "6":
         for i in jogo.pocoes:
-            if i.ativo == True:
+            if(i.ativo == True):
                 print(i.nome, i.tipo)
-                
