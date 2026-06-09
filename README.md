@@ -8,6 +8,6 @@
     <li>Erick Oliveira de Almeida (Def. e prod. Classes, Encapsulamento)</li>
     <li>Vinicius Xavier Luciano (Prod. Herança)</li>
     <li>Jadson Jardel dos Santos (Code Runner)</li>
-    <li>Vyctor Lenno Almeida de Azevedo (Def. e prod. Classes)</li>
+    <li>Vyctorlenno Almeida de Azevedo (Def. e prod. Classes)</li>
     <li>David Caniell Santos de Medeiros (Code Runner)</li>
 </ul>
