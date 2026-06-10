@@ -40,7 +40,7 @@ while True:
                 print("Já existe uma pessoa com esse nome")
             else:
                 jogador = Player(nome)
-                jogo.jogadores.append(jogador)
+                jogo.adicionar_jogador(jogador)
                 print("Jogador", nome, "cadastrado com sucesso!")
     elif opcao == "2":
         tipo = input("Tipo de poção ('comum' ou 'arremessavel'): ")
@@ -58,7 +58,7 @@ while True:
                 print("Já existe uma pocao com esse nome")
             else:
                 pocao = Pocao(nome, tipo)
-                jogo.pocoes.append(pocao)
+                jogo.adicionar_pocao(pocao)
                 print("Poção:", nome, "do tipo:", tipo, ",cadastrada com sucesso!")
         else:
             print("Tipo inválido. Use 'comum' ou 'arremessavel'.")
