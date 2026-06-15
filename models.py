@@ -11,16 +11,18 @@ class Pocao:
         self.ativo = True
 
 
-class Jogo:
+class Jogo(Player, Pocao):
     def __init__(self):
         self.jogadores = []
         self.pocoes = []
 
     def adicionar_jogador(self, jogador):
         self.jogadores.append(jogador)
-
+        super().__init__(jogador.nome)
+            
     def adicionar_pocao(self, pocao):
         self.pocoes.append(pocao)
+        super().__init__(pocao)
 
     def excluir_jogador(self, nome):
         if nome is None:
@@ -30,6 +32,7 @@ class Jogo:
         for jogador in self.jogadores:
             if jogador.nome == nome:
                 self.jogadores.remove(jogador)
+                super().__init__(jogador.nome)
                 print("Jogador removido com sucesso!!")
                 return
 
@@ -43,7 +46,7 @@ class Jogo:
         for pocao in self.pocoes:
             if pocao.nome == nome:
                 self.pocoes.remove(pocao)
-                print("Poção removida com sucesso!!")
+                super().__init__(pocao.nome)
                 return
 
         print("Poção não encontrada.")
