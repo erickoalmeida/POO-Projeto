@@ -41,7 +41,7 @@ while True:
             else:
                 jogador = Player(nome)
                 jogo.adicionar_jogador(jogador)
-                print("Jogador", nome, "cadastrado com sucesso!")
+                print("Jogador", jogador.nome, "cadastrado com sucesso!")
 
     elif opcao == "2":
         tipo = input("Tipo de poção ('comum' ou 'arremessavel'): ")
@@ -60,7 +60,7 @@ while True:
                 else:
                     pocao = Pocao(nome, tipo)
                     jogo.adicionar_pocao(pocao)
-                    print("Poção:", nome, "do tipo:", tipo, ", cadastrada com sucesso!")
+                    print("Poção:", pocao.nome, "do tipo:", pocao.tipo, ", cadastrada com sucesso!")
         else:
             print("Tipo inválido. Use 'comum' ou 'arremessavel'.")
 
@@ -77,6 +77,7 @@ while True:
                 print(i.nome)
         pocao_excluir = input("Digite um nome da poção que deseja excluir: ")
         jogo.excluir_pocao(pocao_excluir)
+        print("Poção", pocao_excluir, "excluída com sucesso!!")
 
     elif opcao == "5":
         for i in jogo.jogadores:
