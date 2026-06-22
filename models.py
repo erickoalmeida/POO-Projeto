@@ -11,7 +11,7 @@ class Pocao:
         self.ativo = True
 
 
-class Jogo(Player, Pocao):
+class Jogo:
     def __init__(self):
         self.jogadores = []
         self.pocoes = []
@@ -32,7 +32,6 @@ class Jogo(Player, Pocao):
         for jogador in self.jogadores:
             if jogador.nome == nome:
                 self.jogadores.remove(jogador)
-                super().__init__(jogador.nome)
                 print("Jogador removido com sucesso!!")
                 return
 
@@ -46,7 +45,7 @@ class Jogo(Player, Pocao):
         for pocao in self.pocoes:
             if pocao.nome == nome:
                 self.pocoes.remove(pocao)
-                super().__init__(pocao.nome)
+                print("pocao removida com sucesso!")
                 return
-
         print("Poção não encontrada.")
+        
