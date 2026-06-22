@@ -16,11 +16,28 @@ class Jogo:
         self.jogadores = []
         self.pocoes = []
 
-    def adicionar_jogador(self, jogador):
+    def adicionar_jogador(self, nome):
+        if not nome:
+            print("Nome inválido.")
+            return
+
+        for jogador in self.jogadores:
+            if jogador.nome == nome:
+                print("Já existe uma pessoa com esse nome")
+                return
+
+        jogador = Player(nome)
         self.jogadores.append(jogador)
+        print("Jogador", nome, "cadastrado com sucesso!")
             
-    def adicionar_pocao(self, pocao):
+    def adicionar_pocao(self, nome, tipo):
+        for pocao in self.pocoes:
+            if pocao.nome == nome:
+                print("Já existe uma pocao com esse nome")
+                return
+        pocao = Pocao(nome, tipo)
         self.pocoes.append(pocao)
+        print("Poção:", nome, "do tipo:", tipo, ",cadastrada com sucesso!")
         
     def excluir_jogador(self, nome):
         if nome is None:
