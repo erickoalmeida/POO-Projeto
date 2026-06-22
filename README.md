@@ -8,6 +8,6 @@
     <li>Erick Oliveira de Almeida (Def. e prod. Classes, Encapsulamento)</li>
     <li>Vinicius Xavier Luciano (QA)</li>
     <li>Jadson Jardel dos Santos (QA)</li>
-    <li>Vyctorlenno Almeida de Azevedo (Def. e prod. Classes)</li>
+    <li>Vyctorlenno Almeida de Azevedo (Def. e prod. Classes, Encapsulamento)</li>
     <li>David Caniell Santos de Medeiros (QA)</li>
 </ul>
