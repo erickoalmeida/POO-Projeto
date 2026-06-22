@@ -18,12 +18,10 @@ class Jogo:
 
     def adicionar_jogador(self, jogador):
         self.jogadores.append(jogador)
-        super().__init__(jogador.nome)
             
     def adicionar_pocao(self, pocao):
         self.pocoes.append(pocao)
-        super().__init__(pocao)
-
+        
     def excluir_jogador(self, nome):
         if nome is None:
             print("Nome inválido.")
