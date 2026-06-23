@@ -24,7 +24,7 @@ while True:
     print("5................ Visu. Jogadores")
     print("6................ Visu. Poções")
 
-    opcao = input("Digite uma opção: ")
+    opcao = str(input("Digite uma opção: "))
 
     if opcao == "1":
         nome = input("Digite o nome do jogador: ")
