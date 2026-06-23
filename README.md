@@ -5,7 +5,7 @@
 </ul>
 <h2>Projeto POO/Pocoes por:</h2>
 <ul>
-    <li>Erick Oliveira de Almeida (Def. e prod. Classes, Encapsulamento)</li>
+    <li>Erick Oliveira de Almeida (Def. e prod. Classes, Encapsulamento, Herança)</li>
     <li>Vinicius Xavier Luciano (QA)</li>
     <li>Jadson Jardel dos Santos (QA)</li>
     <li>Vyctorlenno Almeida de Azevedo (Def. e prod. Classes, Encapsulamento)</li>
